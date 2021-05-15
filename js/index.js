@@ -44,11 +44,11 @@
 
 // const lim1 = 4;
 // const lim2 = 8;
-// let lim3 = 1;
+// let mult = 1;
 // for (i = 8; i >= 4; i--) {
-//   lim3 *= i;
+//   mult *= i;
 // }
-// console.log(lim3);
+// console.log(mult);
 
 // Создать функцию isAdult, которая будет проверять возраст пользователя на совершеннолетие.
 // const age = +prompt('Введите свой возраст ');
@@ -56,11 +56,10 @@
 
 // function isAdult(a) {
 //   if (a < 18) {
-//     alert('Вы несовершенолетние');
-//   }
-//   if (a >= 18) {
-//     alert('Вы совершеннолетние')
-//   }
+//   return false;
+
+//   }else return true;
+
 
 // }
 // ***************************
@@ -68,27 +67,48 @@
 
 // const value = +prompt('Введите число ');
 // primeNum(value);
+// let x = primeNum(value);
+// mesage(x)
 
-// function primeNum(params) {
-//   if (value % value === 0 && value % 1 === 0) {
-//     alert('Число простое ')
-//   } else alert('Число сложное ')
+// function primeNum(x) {
+
+//   for (let i = 2; i < value; i++) {
+//     if (value % i === 0) return false;
+
+//   }
+
+//   return value > 1;
 // }
 
-//****************************** */
+// function mesage(x) {
+//   if (x === true) {
+//     alert('Число простое ');
+//   } else alert('Не простое число')
+// }
+
+// //****************************** */
 
 // Создать функцию checkMultiplicity, которая принимает два числа и проверяет, делится ли первое на второе:
 
 
-// const x = +prompt('Введите первое число ');
-// const y = +prompt('Введите второе число ');
-// checkMultiplicity(x, y);
+// const num1 = +prompt('Введите первое число ');
+// const num2 = +prompt('Введите второе число ');
+// checkMultiplicity(num1, num2);
+// let result = checkMultiplicity(num1, num2);
+// getMessage(result);
 
 // function checkMultiplicity(a, b) {
-//   if (x % y === 0) {
-//     alert('checkMultiplicity(' + x +','+ y + ' )// true');
-//   } else 
-//   alert('checkMultiplicity(' + x +','+ y + ' ) // false');}
+//   if (a % b === 0) {
+//     return true;
+//   } else return false;
+// }
+// function getMessage(a){
+//   if(result ===true){
+//     alert('Первое число делится на второе');
+//   }else alert('НЕ делится');
+// }
+
+
 
 // *******************************
 // Проверка возможности треугольника. Создать функцию которая принимает длины треугольника; функция возвращает true если треугольник возможен и false если нет
@@ -116,12 +136,13 @@
 // const a = +prompt('ВВедите длину стороны  А ');
 // const b = +prompt('Введите длину стороны В ');
 // const c = +prompt('Введите длину стороны С');
+
 // triangleArea(a, b, c);
 
 // function triangleArea(a, b, c) {
 //   const p = +0.5 * (a + b + c);
-//   const s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
-//   alert('Площадь трехугольника = ' + s);
+//    const s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+//   return  alert('Площадь трехугольника = ' + s);
 
 // }
 
@@ -140,11 +161,17 @@
 // const b = +prompt('Введите длину стороны В ');
 // const c = +prompt('Введите высоту стороны С');
 // parallelepipedArea(a, b, c);
+// let message = parallelepipedArea(a, b, c);
+// getMessage(message);
 
 // function parallelepipedArea(a, b, c) {
 //   const s = 2 * ((a * b) + (b * c) + (a * c));
-//   alert('Площадь паралелепипеда = ' + s);
+//   return s;
 
+// }
+
+// function getMessage(a) {
+//   alert('Площадь равна = '+ message)
 // }
 
 
@@ -153,65 +180,67 @@
 // 1. создать объект Student который содержит следующие свойства: имя, фамилию, пол, контактные данные, методы: вывод адреса, смена пола.
 
 
-const Student = {
-  firstname: 'Ivan',
-  lastName: 'Ivanov',
-  isMale: 'false',
-  adress: {
-    city: 'zaporozhie',
-    street: 'lenina',
-    home: '51',
-  },
-  tel: '0957845457',
-  outputAdress() {
-    console.log(Student.adress);
+// const Student = {
+//   firstname: 'Ivan',
+//   lastName: 'Ivanov',
+//   isMale: 'false',
+//   adress: {
+//     city: 'zaporozhie',
+//     street: 'lenina',
+//     home: '51',
+//   },
+//   tel: '0957845457',
+//   outputAdress() {
+//     console.log(Student.adress);
 
-  },
-  genderReassignment() {
-    if(
-    this.isMale == 'true'){
-     this.isMale ='false'
-    }else this.isMale='true',
-    
-    console.log(this.isMale);
-
-  },
-
-
-}
-Student.outputAdress();
-Student.genderReassignment();
-// *********************************
-
-
-//  создать объект, который содержит свойства, о факультете и кафедре, методы: перевод на другой факультет.
+//   },
+//   genderReassignment() {
+//     if(
+//     this.isMale == 'true'){
+//      this.isMale ='false'
+//     }else this.isMale='true',
 
 
 
-const University = {
-  faculty:'management',
-  chair: 'basic',
-  
-
-  transferFaculty() {
-    this.faculty='economy',
-    console.log(this.faculty);
-  },
-}
-
-//****************************** */
-// Создать функции-конструкторы:
-// - Книга (автор, название, год издания, издательство)
-// - Электронная версия книги (автор, название, год издания, издательство, формат, электронный номер)
+//   },
 
 
-const Book = {
+// }
+// Student.outputAdress();
+// Student.genderReassignment();
+// // *********************************
 
 
-  Book(author,name,year,publishing){
-    this.author = author;
-    this.name = name;
-    this.year = year;
-    this.publishing = publishing;
-  }
-}
+// //  создать объект, который содержит свойства, о факультете и кафедре, методы: перевод на другой факультет.
+
+
+// const University = 
+// {
+//   faculty: 'management',
+//   chair: 'basic',
+
+
+//   transferFaculty(f) {
+//     this.faculty = economy;
+
+//   },
+// }
+// University.transferFaculty();
+// alert(University.faculty);
+
+// //****************************** */
+// // Создать функции-конструкторы:
+// // - Книга (автор, название, год издания, издательство)
+// // - Электронная версия книги (автор, название, год издания, издательство, формат, электронный номер)
+
+
+// const Book = {
+
+
+//   Book(author,name,year,publishing){
+//     this.author = author;
+//     this.name = name;
+//     this.year = year;
+//     this.publishing = publishing;
+//   }
+// }
