@@ -22,20 +22,20 @@
 // ) Вывести факториал запрошенного числа. (5!=1*2*3*4*5)
 
 // let value = +prompt('Введите число');
-// let fact=1;
-// for(let i=1;i <=value;i++) {
-//  fact *=i;
+// let fact = 1;
+// for (let i = 1; i <= value; i++) {
+//     fact *= i;
 
 // }
-// console.log(value+'!='+ fact); 
+// console.log(value + '!=' + fact);
 // *******************************
 
 // *вычислить сумму первых N элементов последовательности 1 + 1/2 + 1/3 + ...+ 1/N . параметр N задает пользователь
 
 // let n = +prompt('Введите число n');
 // let sum = +0;
-// for(i = 1;i <= n;i++) {
-//     sum +=1/i;
+// for (i = 1; i <= n; i++) {
+//     sum += 1 / i;
 // }
 // console.log(sum);
 
@@ -46,7 +46,7 @@
 // const lim2 = 8;
 // let mult = 1;
 // for (i = 8; i >= 4; i--) {
-//   mult *= i;
+//     mult *= i;
 // }
 // console.log(mult);
 
@@ -55,10 +55,10 @@
 // isAdult(age);
 
 // function isAdult(a) {
-//   if (a < 18) {
-//   return false;
-//    }else return true;
-// }
+//     if (a < 18) {
+//         return false;
+//     } else return true;
+}
 // ***************************
 //*Функция, которая запрашивает число и проверяет простое ли оно (простое число делиться без остатка на себя и на единицу)
 
@@ -69,19 +69,19 @@
 
 // function primeNum(x) {
 
-//   for (let i = 2; i < value; i++) {
-//     if (value % i === 0) return false;
+//     for (let i = 2; i < value; i++) {
+//         if (value % i === 0) return false;
 
-//   }
+//     }
 
-//   return value > 1;
+//     return value > 1;
 // }
 
 // function mesage(x) {
-//   if (x === true) {
-//     alert('Число простое ');
-//   } else alert('Не простое число')
-// }
+//     if (x === true) {
+//         alert('Число простое ');
+//     } else alert('Не простое число')
+}
 
 // //****************************** */
 
@@ -95,15 +95,16 @@
 // getMessage(result);
 
 // function checkMultiplicity(a, b) {
-//   if (a % b === 0) {
-//     return true;
-//   } else return false;
+//     if (a % b === 0) {
+//         return true;
+//     } else return false;
 // }
-// function getMessage(a){
-//   if(result ===true){
-//     alert('Первое число делится на второе');
-//   }else alert('НЕ делится');
-// }
+
+// function getMessage(a) {
+//     if (result === true) {
+//         alert('Первое число делится на второе');
+//     } else alert('НЕ делится');
+}
 
 
 
@@ -242,9 +243,4 @@
 //     this.year = year;
 //     this.publishing = publishing;
 // }
-// const book1 = new Book('David','javaScript','2021','Диалектика');
-
-
-
-
-
+// const book1 = new Book('David','javaScript','2021','Диалектика');g
