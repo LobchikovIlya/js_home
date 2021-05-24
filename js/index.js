@@ -57,10 +57,7 @@
 // function isAdult(a) {
 //   if (a < 18) {
 //   return false;
-
-//   }else return true;
-
-
+//    }else return true;
 // }
 // ***************************
 //*Функция, которая запрашивает число и проверяет простое ли оно (простое число делиться без остатка на себя и на единицу)
@@ -113,16 +110,17 @@
 // *******************************
 // Проверка возможности треугольника. Создать функцию которая принимает длины треугольника; функция возвращает true если треугольник возможен и false если нет
 
+
 // const a = +prompt('ВВедите длину стороны  А ');
 // const b = +prompt('Введите длину стороны В ');
 // const c = +prompt('Введите длину стороны С');
 // existenceTriangles(a, b, c);
 
 // function existenceTriangles(a, b, c) {
-//   if (a + b > c || b + c > a || a + c > b) {
-//     alert('Трехугольник существует ');
+//   if (a + b > c && b + c > a && a + c > b) {
+//   return true;
 //   } else
-//     alert('Трехугольник не существует ');
+//     return false;
 
 // }
 
@@ -142,7 +140,7 @@
 // function triangleArea(a, b, c) {
 //   const p = +0.5 * (a + b + c);
 //    const s = Math.sqrt(p * (p - a) * (p - b) * (p - c));
-//   return  alert('Площадь трехугольника = ' + s);
+//   return  s;
 
 // }
 
@@ -180,8 +178,8 @@
 // 1. создать объект Student который содержит следующие свойства: имя, фамилию, пол, контактные данные, методы: вывод адреса, смена пола.
 
 
-// const Student = {
-//   firstname: 'Ivan',
+// const student = {
+//   firstName: 'Ivan',
 //   lastName: 'Ivanov',
 //   isMale: 'false',
 //   adress: {
@@ -191,7 +189,7 @@
 //   },
 //   tel: '0957845457',
 //   outputAdress() {
-//     console.log(Student.adress);
+//     console.log(student.adress);
 
 //   },
 //   genderReassignment() {
@@ -206,27 +204,28 @@
 
 
 // }
-// Student.outputAdress();
-// Student.genderReassignment();
+// student.outputAdress();
+// student.genderReassignment();
 // // *********************************
 
 
 // //  создать объект, который содержит свойства, о факультете и кафедре, методы: перевод на другой факультет.
 
 
-// const University = 
+// const university = 
 // {
 //   faculty: 'management',
 //   chair: 'basic',
+// // 
 
-
-//   transferFaculty(f) {
-//     this.faculty = economy;
+//   transferFaculty(newfaculty) {
+//    return this.faculty = 'newfaculty';
 
 //   },
 // }
-// University.transferFaculty();
-// alert(University.faculty);
+// university.transferFaculty();
+// console.log(faculty);
+
 
 // //****************************** */
 // // Создать функции-конструкторы:
@@ -234,13 +233,18 @@
 // // - Электронная версия книги (автор, название, год издания, издательство, формат, электронный номер)
 
 
-// const Book = {
+//
 
 
-//   Book(author,name,year,publishing){
+// function Book(author, name, year, publishing) {
 //     this.author = author;
 //     this.name = name;
 //     this.year = year;
 //     this.publishing = publishing;
-//   }
 // }
+// const book1 = new Book('David','javaScript','2021','Диалектика');
+
+
+
+
+
